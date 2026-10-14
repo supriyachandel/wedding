@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
   <meta name="theme-color" content="#4a050f" />
   <meta name="description" content="Wedding Invitation of Supriya & Ankush — 10 November 2026. Join us in celebrating our joyous wedding ceremonies at MJ Farm, Kharar, Punjab." />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   
   <title>Supriya & Ankush — Royal Wedding Invitation</title>
 
@@ -31,8 +34,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Great+Vibes&family=Marcellus&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Yatra+One&display=swap" rel="stylesheet" />
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/style.css?v=2.1" />
+  <link rel="stylesheet" href="css/animations.css?v=2.1" />
 
   <!-- Schema.org JSON-LD Structured Data for Events -->
   <script type="application/ld+json">
@@ -193,18 +196,26 @@
       <div class="container">
         <div class="couple-royal-card reveal-on-scroll">
           
-          <!-- Decorative Gold Palace Arch Frame -->
-          <div class="couple-frame-wrapper animate-float">
+          <div class="heavenly-blessings-title">
+            With the heavenly blessings of Smt. Nirmala Devi &amp; Sh. Karam Chand
+          </div>
+
+          <!-- Decorative Arch Frame with Real Couple Photo -->
+          <div class="couple-frame-wrapper arch-style animate-float">
             <div class="couple-frame-inner">
-              <img src="assets/images/couple.jpg" alt="Artistic royal illustration of bride Supriya and groom Ankush in regal wedding attire" />
+              <img src="assets/images/couple_real.jpg" alt="Supriya and Ankush" onerror="this.src='assets/images/couple.jpg'" />
             </div>
           </div>
 
-          <!-- Couple Names Typography -->
+          <!-- Couple Names Typography (Bride's Side: Supriya weds Ankush) -->
           <div class="couple-names-wrap">
             <h1 class="couple-title-name gold-text" id="couple-heading">SUPRIYA</h1>
-            <span class="couple-ampersand">&amp;</span>
+            <p class="couple-relation-sub">(D/o Smt. Nirmala Devi &amp; Sh. Karam Chand)</p>
+            
+            <span class="couple-weds-script">weds</span>
+            
             <h1 class="couple-title-name gold-text">ANKUSH</h1>
+            <p class="couple-relation-sub">(S/o Smt. Sweety Gupta &amp; Sh. Naresh Kumar)</p>
           </div>
 
           <p class="couple-tagline">"Two Hearts, One Beautiful Beginning"</p>
@@ -213,23 +224,6 @@
             <span class="ornament-icon">⚜</span>
             <span>WEDDING DATE : 10 NOVEMBER 2026</span>
             <span class="ornament-icon">⚜</span>
-          </div>
-
-          <!-- Family Information -->
-          <div class="families-container">
-            <!-- Bride's Family -->
-            <div class="family-box reveal-on-scroll reveal-delay-1">
-              <h3 class="family-box-title">Bride's Family</h3>
-              <div class="family-box-parents">Mrs. Nirmala Devi &amp; Mr. Karam Chand</div>
-              <p class="family-box-relation">Daughter of Mrs. Nirmala Devi and Mr. Karam Chand</p>
-            </div>
-
-            <!-- Groom's Family -->
-            <div class="family-box reveal-on-scroll reveal-delay-2">
-              <h3 class="family-box-title">Groom's Family</h3>
-              <div class="family-box-parents">Mrs. Sweety Gupta &amp; Mr. Naresh Kumar</div>
-              <p class="family-box-relation">Son of Mrs. Sweety Gupta and Mr. Naresh Kumar</p>
-            </div>
           </div>
 
         </div>
@@ -241,7 +235,7 @@
       <div class="container">
         <div class="countdown-wrapper reveal-on-scroll">
           <h2 class="countdown-title" id="countdown-heading">Counting Down To Our Forever</h2>
-          <p class="countdown-subtitle">10 November 2026 • Asia/Kolkata (IST)</p>
+          <p class="countdown-subtitle">10 November 2026</p>
 
           <div class="countdown-grid" id="countdown-grid">
             <div class="countdown-box">
@@ -263,6 +257,86 @@
           </div>
 
           <div id="countdown-wedding-day-message" class="countdown-wedding-day-message"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. MEMORIES — 5-PHOTO STORY REEL (INTERACTIVE SWIPE UP VIEWER) -->
+    <section class="wedding-section memories-section" id="gallery-section" aria-labelledby="memories-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <h2 class="section-title gold-text" id="memories-heading">Memories</h2>
+          <p class="section-subtitle">Swipe Up For Photos</p>
+          <div class="section-ornament">
+            <span class="ornament-line"></span>
+            <span class="ornament-icon">❦</span>
+            <span class="ornament-line"></span>
+          </div>
+        </div>
+
+        <div class="reel-viewport reveal-on-scroll" id="reel-viewport">
+          <div class="swipe-up-badge" id="swipe-hint">
+            <span>👆 Swipe up for more</span>
+          </div>
+
+          <div class="reel-actions-right">
+            <div class="counter-pill" id="reel-counter">1 / 5</div>
+            <button class="reel-action-btn" id="btn-reel-up" title="Previous Photo" aria-label="Previous Photo">▲</button>
+            <button class="reel-action-btn" id="btn-reel-down" title="Next Photo" aria-label="Next Photo">▼</button>
+            <button class="reel-action-btn" id="btn-like" title="Heart this photo" aria-label="Heart this photo">❤️</button>
+          </div>
+
+          <div class="reel-feed" id="reel-feed">
+            <!-- Slide 1: Chapter I (Snow Mountains) -->
+            <div class="reel-card">
+              <img src="assets/images/chapter1.jpg" alt="Chapter 1 - Where It All Began" loading="lazy" onerror="this.src='assets/images/cover.jpg'" />
+              <div class="reel-caption-overlay">
+                <span class="reel-tag">Chapter I</span>
+                <div class="reel-title">Where It All Began</div>
+                <div class="reel-desc">Chilly mountain breezes and the warmest new beginnings.</div>
+              </div>
+            </div>
+
+            <!-- Slide 2: Chapter II (City Lights) -->
+            <div class="reel-card">
+              <img src="assets/images/chapter2.jpg" alt="Chapter 2 - Laughter & City Lights" loading="lazy" onerror="this.src='assets/images/cover.jpg'" />
+              <div class="reel-caption-overlay">
+                <span class="reel-tag">Chapter II</span>
+                <div class="reel-title">Laughter &amp; City Lights</div>
+                <div class="reel-desc">Every smile shared became our favorite place to be.</div>
+              </div>
+            </div>
+
+            <!-- Slide 3: Chapter III (Beach Proposal) -->
+            <div class="reel-card">
+              <img src="assets/images/chapter3.jpg" alt="Chapter 3 - Promises Under The Sky" loading="lazy" onerror="this.src='assets/images/cover.jpg'" />
+              <div class="reel-caption-overlay">
+                <span class="reel-tag">Chapter III</span>
+                <div class="reel-title">Promises Under The Sky</div>
+                <div class="reel-desc">A million quiet moments leading to this one forever.</div>
+              </div>
+            </div>
+
+            <!-- Slide 4: Chapter IV (Dressed In Grace) -->
+            <div class="reel-card">
+              <img src="assets/images/chapter4.jpg" alt="Chapter 4 - Dressed In Grace" loading="lazy" onerror="this.src='assets/images/cover.jpg'" />
+              <div class="reel-caption-overlay">
+                <span class="reel-tag">Chapter IV</span>
+                <div class="reel-title">Dressed In Grace</div>
+                <div class="reel-desc">Standing tall together in love and style.</div>
+              </div>
+            </div>
+
+            <!-- Slide 5: Chapter V (Together Forever) -->
+            <div class="reel-card">
+              <img src="assets/images/couple_selfie.jpg" alt="Chapter 5 - Together Forever" loading="lazy" onerror="this.src='assets/images/cover.jpg'" />
+              <div class="reel-caption-overlay">
+                <span class="reel-tag">Chapter V</span>
+                <div class="reel-title">Together Forever</div>
+                <div class="reel-desc">The wedding day memories are on their way! Counting down to 10 November 2026.</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -346,9 +420,9 @@
   <div id="toast-notice" class="toast-notice" role="status" aria-live="polite"></div>
 
   <!-- Application Scripts -->
-  <script src="js/config.js"></script>
-  <script src="js/canvas-effects.js"></script>
-  <script src="js/audio.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/config.js?v=2.1"></script>
+  <script src="js/canvas-effects.js?v=2.1"></script>
+  <script src="js/audio.js?v=2.1"></script>
+  <script src="js/main.js?v=2.1"></script>
 </body>
 </html>

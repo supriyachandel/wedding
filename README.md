@@ -33,8 +33,7 @@ A luxurious, cinematic, interactive Indian wedding invitation website built with
 
 5. **Wedding Functions Timeline**:
    - **Monday, 9 November 2026**:
-     - *Morning Kirtan* (10:00 AM, Bride's Residence)
-     - *Nanka Swagat / Mehndi Ceremony* (2:00 PM, Bride's Residence)
+     - *Nanka Swagat* (5:00 PM, Bride's Residence)
      - *DJ Night* (7:00 PM, Bride's Residence)
    - **Tuesday, 10 November 2026**:
      - *Haldi Ceremony* (9:00 AM, Bride's Residence)
@@ -42,8 +41,8 @@ A luxurious, cinematic, interactive Indian wedding invitation website built with
        - Highlighted with grand gold badge and prominent styling.
        - Interactive **"Get Directions"** button linked to Google Maps (opens in a new tab).
        - **"Add to Calendar"** integration for Google Calendar.
-     - *Vidai* (4:00 AM, Venue: To be confirmed)
-       - Handled with unconfirmed date configuration (`Date to be confirmed`), easily editable in `js/config.js`.
+     - *Vidai* (4:00 AM, Bride's Residence)
+       - Handled with flexible date configuration (`Date to be confirmed`), easily editable in `js/config.js`.
 
 6. **Closing Family Invitation Card**:
    - Traditional Indian card format with royal maroon background, gold corner accents, and warm regards from parents **Nirmala Devi & Karam Chand**.

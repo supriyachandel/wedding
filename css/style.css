@@ -1462,3 +1462,240 @@ body::before {
     font-size: 1.6rem;
   }
 }
+
+/* ==========================================================================
+   COUPLE ARCH & MEMORIES 5-PHOTO STORY REEL ADDITIONS
+   ========================================================================== */
+
+.heavenly-blessings-title {
+  font-family: var(--font-serif-classic);
+  font-size: 0.95rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold-champagne);
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.couple-frame-wrapper.arch-style {
+  max-width: 360px;
+  border-radius: 180px 180px 24px 24px;
+  padding: 7px;
+  margin: 10px auto 28px;
+  background: var(--gold-gradient);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7), 0 0 35px rgba(223, 186, 115, 0.4);
+}
+
+.couple-frame-wrapper.arch-style .couple-frame-inner {
+  border-radius: 174px 174px 18px 18px;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  position: relative;
+}
+
+.couple-relation-sub {
+  font-size: 0.95rem;
+  color: var(--gold-champagne);
+  font-family: var(--font-body);
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+.couple-weds-script {
+  font-family: var(--font-script);
+  font-size: 3.5rem;
+  color: var(--gold-bright);
+  display: block;
+  margin: 4px 0;
+  line-height: 1;
+}
+
+/* ==========================================================================
+   MEMORIES — 5-PHOTO STORY REEL
+   ========================================================================== */
+.memories-section {
+  text-align: center;
+  position: relative;
+}
+
+.reel-viewport {
+  position: relative;
+  width: 100%;
+  max-width: 390px;
+  height: 540px;
+  margin: 0 auto 30px;
+  border-radius: 26px;
+  overflow: hidden;
+  border: 2px solid var(--gold-warm);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75), 0 0 30px rgba(223, 186, 115, 0.3);
+  background: #0d0103;
+  z-index: 2;
+}
+
+.reel-feed {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  scrollbar-width: none;
+}
+
+.reel-feed::-webkit-scrollbar {
+  display: none;
+}
+
+.reel-card {
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  position: relative;
+  overflow: hidden;
+  background: #111;
+}
+
+.reel-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+.swipe-up-badge {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(32, 2, 6, 0.85);
+  border: 1px solid var(--gold-warm);
+  color: var(--gold-champagne);
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(8px);
+  z-index: 10;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  animation: floatUpHint 2s infinite ease-in-out;
+  transition: opacity 0.5s ease;
+}
+
+@keyframes floatUpHint {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -5px); }
+}
+
+.reel-actions-right {
+  position: absolute;
+  right: 14px;
+  bottom: 85px;
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.reel-action-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(32, 2, 6, 0.85);
+  border: 1px solid var(--gold-warm);
+  color: var(--gold-champagne);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  user-select: none;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.reel-action-btn:hover {
+  background: var(--royal-maroon);
+  border-color: var(--gold-bright);
+  transform: scale(1.08);
+}
+
+.reel-action-btn:active {
+  transform: scale(0.9);
+}
+
+.counter-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--gold-champagne);
+  background: rgba(32, 2, 6, 0.85);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--gold-warm);
+  letter-spacing: 1px;
+}
+
+.reel-caption-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 50px 20px 24px;
+  background: linear-gradient(to top, rgba(18, 1, 4, 0.95) 0%, rgba(18, 1, 4, 0.6) 60%, transparent 100%);
+  color: #fff;
+  z-index: 8;
+  pointer-events: none;
+  text-align: left;
+}
+
+.reel-tag {
+  font-family: var(--font-serif-royal);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--gold-bright);
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.reel-title {
+  font-family: var(--font-serif-classic);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--ivory-warm);
+  margin-bottom: 4px;
+}
+
+.reel-desc {
+  font-size: 0.85rem;
+  color: var(--gold-champagne);
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+/* Double click Heart blast */
+.heart-blast {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  font-size: 4.8rem;
+  pointer-events: none;
+  z-index: 25;
+  animation: heartPop 0.85s cubic-bezier(0.17, 0.89, 0.32, 1.28) forwards;
+}
+
+@keyframes heartPop {
+  0% { transform: translate(-50%, -50%) scale(0); opacity: 1; }
+  50% { transform: translate(-50%, -50%) scale(1.4); opacity: 0.95; }
+  100% { transform: translate(-50%, -90px) scale(1); opacity: 0; }
+}

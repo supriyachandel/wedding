@@ -11,24 +11,67 @@ const WEDDING_CONFIG = {
     bride: {
       firstName: "Supriya",
       fullName: "Supriya",
-      parents: "Mrs. Nirmala Devi & Mr. Karam Chand",
+      parents: "Smt. Nirmala Devi & Sh. Karam Chand",
       familyTitle: "Bride's Family",
-      relationText: "Daughter of Mrs. Nirmala Devi and Mr. Karam Chand"
+      relationText: "Daughter of Smt. Nirmala Devi and Sh. Karam Chand"
     },
     groom: {
       firstName: "Ankush",
       fullName: "Ankush",
-      parents: "Mrs. Sweety Gupta & Mr. Naresh Kumar",
+      parents: "Smt. Sweety Gupta & Sh. Naresh Kumar",
       familyTitle: "Groom's Family",
-      relationText: "Son of Mrs. Sweety Gupta and Mr. Naresh Kumar"
+      relationText: "Son of Smt. Sweety Gupta and Sh. Naresh Kumar"
     },
+    heavenlyBlessings: "With the heavenly blessings of Smt. Nirmala Devi & Sh. Karam Chand",
     subtitle: "Two Hearts, One Beautiful Beginning",
     mainDateText: "10 November 2026",
+    photo: "assets/images/couple_real.jpg",
+    illustrationFallback: "assets/images/couple.jpg",
     // Target date for countdown (10 November 2026 18:00 IST - Asia/Kolkata UTC+05:30)
     // Format: YYYY-MM-DDTHH:mm:ss+05:30
     weddingDateISO: "2026-11-10T18:00:00+05:30",
     timezone: "Asia/Kolkata"
   },
+
+  // 5 Memories Photos / Story Reel
+  memories: [
+    {
+      id: 1,
+      tag: "Chapter I",
+      title: "Where It All Began",
+      desc: "Chilly mountain breezes and the warmest new beginnings.",
+      image: "assets/images/chapter1.jpg"
+    },
+    {
+      id: 2,
+      tag: "Chapter II",
+      title: "Laughter & City Lights",
+      desc: "Every smile shared became our favorite place to be.",
+      image: "assets/images/chapter2.jpg"
+    },
+    {
+      id: 3,
+      tag: "Chapter III",
+      title: "Promises Under The Sky",
+      desc: "A million quiet moments leading to this one forever.",
+      image: "assets/images/chapter3.jpg"
+    },
+    {
+      id: 4,
+      tag: "Chapter IV",
+      title: "Dressed In Grace",
+      desc: "Standing tall together in love and style.",
+      image: "assets/images/chapter4.jpg"
+    },
+    {
+      id: 5,
+      tag: "Chapter V",
+      title: "Together Forever",
+      desc: "The wedding day memories are on their way! Counting down to 10 November 2026.",
+      image: "assets/images/couple_selfie.jpg"
+    }
+  ],
+
 
   // Opening Envelope Card Details
   envelope: {
@@ -47,45 +90,24 @@ const WEDDING_CONFIG = {
   // Ordered by date and time
   functions: [
     {
-      id: "kirtan",
-      title: "Morning Kirtan",
-      subtitle: "Devotional Kirtan & Family Blessings",
+      id: "nanka-swagat",
+      title: "Nanka Swagat",
+      subtitle: "Welcoming Maternal Grandparents & Family",
       dayName: "Monday",
       dateFormatted: "9 November 2026",
       dateISO: "2026-11-09",
-      time: "10:00 AM",
+      time: "5:00 PM",
       venue: "Bride's Residence",
       address: "Bride's Residence",
-      badge: "Traditional Puja",
-      image: "assets/images/kirtan.jpg",
-      description: "Beginning our wedding festivities with the divine blessings of Waheguru, seeking peace, harmony, and joy for the couple.",
-      mapsUrl: null, // Private residence
-      calendarEvent: {
-        title: "Morning Kirtan - Supriya & Ankush Wedding",
-        start: "20261109T043000Z", // 10:00 AM IST is 04:30 UTC
-        end: "20261109T073000Z",
-        details: "Morning Kirtan for Supriya & Ankush Wedding at Bride's Residence"
-      }
-    },
-    {
-      id: "mehndi",
-      title: "Nanka Swagat / Mehndi Ceremony",
-      subtitle: "Henna, Music & Celebration",
-      dayName: "Monday",
-      dateFormatted: "9 November 2026",
-      dateISO: "2026-11-09",
-      time: "2:00 PM",
-      venue: "Bride's Residence",
-      address: "Bride's Residence",
-      badge: "Henna & Festivity",
-      image: "assets/images/mehndi.jpg",
-      description: "An afternoon of joyous mehndi adornment, traditional Punjabi boliyan, welcoming maternal grandparents (Nanka), and festive folk dances.",
+      badge: "Traditional Welcome",
+      image: "assets/images/nanka_swagat.jpg",
+      description: "A warm and joyous gathering welcoming maternal grandparents and family (Nanka) with traditional Punjabi hospitality, boliyan, and heartfelt blessings.",
       mapsUrl: null,
       calendarEvent: {
-        title: "Nanka Swagat & Mehndi - Supriya & Ankush Wedding",
-        start: "20261109T083000Z", // 2:00 PM IST is 08:30 UTC
-        end: "20261109T123000Z",
-        details: "Nanka Swagat & Mehndi Ceremony for Supriya & Ankush Wedding at Bride's Residence"
+        title: "Nanka Swagat - Supriya & Ankush Wedding",
+        start: "20261109T113000Z", // 5:00 PM IST is 11:30 UTC
+        end: "20261109T143000Z",
+        details: "Nanka Swagat ceremony for Supriya & Ankush Wedding at Bride's Residence"
       }
     },
     {
@@ -164,8 +186,8 @@ const WEDDING_CONFIG = {
       dateISO: null,
       dateStatusText: "Date to be confirmed",
       time: "4:00 AM",
-      venue: "To be confirmed",
-      address: "To be confirmed",
+      venue: "Bride's Residence",
+      address: "Bride's Residence",
       badge: "Emotional Farewell",
       image: "assets/images/vidai.jpg",
       description: "A tender, emotional farewell as our dearest daughter embarks on her new journey with love, prayers, and eternal family blessings.",

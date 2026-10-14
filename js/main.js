@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupCountdownTimer();
   setupEnvelopeInteractions(audioManager, canvasFX);
   setupScrollObservers();
+  setupMemoriesReel();
   setupFloatingControls();
   setupShareAndToast();
 });
@@ -368,4 +369,59 @@ function setupShareAndToast() {
 
   if (btnShare) btnShare.addEventListener('click', handleShare);
   if (btnHeaderShare) btnHeaderShare.addEventListener('click', handleShare);
+}
+
+/**
+ * Interactive 5-Photo Memories Reel Controller (Swipe Up / Down, Counter & Heart Blast)
+ */
+function setupMemoriesReel() {
+  const reelFeed = document.getElementById('reel-feed');
+  const reelViewport = document.getElementById('reel-viewport');
+  const btnReelUp = document.getElementById('btn-reel-up');
+  const btnReelDown = document.getElementById('btn-reel-down');
+  const btnLike = document.getElementById('btn-like');
+  const counterPill = document.getElementById('reel-counter');
+  const swipeHint = document.getElementById('swipe-hint');
+  const totalSlides = 5;
+
+  if (!reelFeed || !reelViewport) return;
+
+  if (btnReelUp) {
+    btnReelUp.addEventListener('click', () => {
+      reelFeed.scrollBy({ top: -reelFeed.clientHeight, behavior: 'smooth' });
+    });
+  }
+
+  if (btnReelDown) {
+    btnReelDown.addEventListener('click', () => {
+      reelFeed.scrollBy({ top: reelFeed.clientHeight, behavior: 'smooth' });
+    });
+  }
+
+  reelFeed.addEventListener('scroll', () => {
+    const activeIdx = Math.min(
+      totalSlides,
+      Math.max(1, Math.round(reelFeed.scrollTop / reelFeed.clientHeight) + 1)
+    );
+    if (counterPill) {
+      counterPill.textContent = `${activeIdx} / ${totalSlides}`;
+    }
+    if (swipeHint && reelFeed.scrollTop > 30) {
+      swipeHint.style.opacity = '0';
+    }
+  }, { passive: true });
+
+  function spawnHeartEffect() {
+    const heart = document.createElement('div');
+    heart.className = 'heart-blast';
+    heart.innerHTML = '❤️';
+    reelViewport.appendChild(heart);
+    setTimeout(() => heart.remove(), 900);
+  }
+
+  if (btnLike) {
+    btnLike.addEventListener('click', spawnHeartEffect);
+  }
+
+  reelFeed.addEventListener('dblclick', spawnHeartEffect);
 }
