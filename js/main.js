@@ -369,6 +369,12 @@ function setupShareAndToast() {
 
   if (btnShare) btnShare.addEventListener('click', handleShare);
   if (btnHeaderShare) btnHeaderShare.addEventListener('click', handleShare);
+
+  // Sync WhatsApp RSVP button link from config
+  const rsvpBtn = document.querySelector('.btn-rsvp-whatsapp');
+  if (rsvpBtn && window.WEDDING_CONFIG && window.WEDDING_CONFIG.rsvp && window.WEDDING_CONFIG.rsvp.whatsappUrl) {
+    rsvpBtn.href = window.WEDDING_CONFIG.rsvp.whatsappUrl;
+  }
 }
 
 /**

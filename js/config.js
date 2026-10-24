@@ -209,8 +209,8 @@ const WEDDING_CONFIG = {
 
   // Contact / RSVP & Social Links
   rsvp: {
-    phone: "+917889430245",
-    whatsappUrl: "https://wa.me/917889430245?text=Congratulations%20to%20Supriya%20and%20Ankush!%20We%20delightfully%20accept%20the%20invitation%20and%20will%20join%20the%20wedding%20celebrations.",
+    phone: "+919855675290",
+    whatsappUrl: "https://wa.me/919855675290?text=Congratulations%20to%20Supriya%20and%20Ankush!%20We%20delightfully%20accept%20the%20invitation%20and%20will%20join%20the%20wedding%20celebrations.",
     shareTitle: "Supriya & Ankush Wedding Invitation",
     shareText: "You are cordially invited to celebrate the wedding of Supriya & Ankush on 10 November 2026 at MJ Farm, Kharar, Punjab.",
     shareUrl: window.location.href
